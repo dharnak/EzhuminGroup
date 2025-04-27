@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh; /* full screen height */
+  padding: 20px; /* space inside */
+  background-color: #f0f0f0; /* example */
+  overflow: hidden; /* no overflow */
+}
+
 /* Animations */
 @keyframes slideInLeft {
     0% {
