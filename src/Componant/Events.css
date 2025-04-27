@@ -1,0 +1,184 @@
+/* General Events Page Styling */
+.events-container {
+    padding: 2rem;
+    min-height: 100vh;
+    background: linear-gradient(to top, black, #0000ff); /* Black to blue gradient */
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+  }
+  
+  /* Events Section Title */
+  .events-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00d9ff;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for emphasis */
+  }
+  
+  /* Grid Layout for Events */
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Event Card Styling */
+  .event-card {
+    background: rgba(255, 255, 255, 0.05); /* Slight transparency */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect for Event Card */
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Event Image */
+  .event-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Added border for separation */
+  }
+  
+  /* Event Content */
+  .event-content {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for text */
+    border-radius: 0 0 16px 16px; /* Rounded bottom corners */
+  }
+  
+  .event-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #00c0ff;
+    font-weight: bold;
+  }
+  
+  .event-content p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+  }
+  
+  /* Carousel Container */
+  .img-c {
+    display: flex;
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(to bottom, black, white);
+  }
+  
+  /* Carousel Button (Left) */
+  .carousel-button_left {
+    opacity: 0.7;
+    height: 100%;
+    width: 50px;
+    color: #ffffff;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), transparent);
+    border: none;
+    justify-content: center;
+    font-size: 2.5rem;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-button_left:hover {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.6), transparent);
+  }
+  
+  /* Carousel Button (Right) */
+  .carousel-button_right {
+    opacity: 0.7;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.3), transparent);
+    border: none;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-button_right:hover {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.6), transparent);
+  }
+  
+  /* Flex container for carousel buttons */
+  .C-But {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  
+  /* Responsive Design for Events Section */
+  @media screen and (max-width: 1024px) {
+    .events-title {
+        font-size: 1.8rem; /* Adjust title size for medium screens */
+    }
+  
+    .events-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust grid for medium screens */
+    }
+  
+    .carousel-button_left, .carousel-button_right {
+        font-size: 2.3rem; /* Slightly smaller buttons for medium screens */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .events-title {
+        font-size: 1.5rem; /* Adjust title size for smaller screens */
+    }
+  
+    .events-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+    }
+  
+    .event-card {
+        height: 100%;
+        width: 100%;
+    }
+  
+    .carousel-button_left, .carousel-button_right {
+        font-size: 2rem; /* Smaller carousel button size */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .events-title {
+        font-size: 1.2rem; /* Further reduce title size */
+    }
+  
+    .events-grid {
+        grid-template-columns: 1fr; /* Stack events vertically on very small screens */
+    }
+  
+    .event-card {
+        width: 100%;
+    }
+  
+    .carousel-button_left, .carousel-button_right {
+        font-size: 1.5rem; /* Further reduce carousel button size */
+    }
+  }
+  

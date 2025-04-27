@@ -1,0 +1,267 @@
+/* Animations */
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .ServiceHolder {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(to top, black, blue);
+    width: 100vw;
+  }
+  
+  .service {
+    position: absolute;
+    display: flex;
+    height: auto;
+    width: 40%;
+    top: 10vh;
+    margin: 5%;
+    color: aliceblue;
+    flex-direction: column;
+    opacity: 0; /* Initially hidden */
+    animation: slideInLeft ease-out forwards;
+    animation-timeline: view(); /* Add animation */
+  }
+  
+  .Sertit {
+    text-align: center;
+    position: relative;
+    padding-top: 3%;
+    font-size: xx-large;
+  }
+  
+  .Sercon {
+    text-align: justify;
+    text-indent: 10%;
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    height: 80%;
+    padding: 0% 5% 5% 5%;
+    flex-wrap: wrap;
+    line-height: 3;
+  }
+  
+  .whatwe {
+    width: 40%;
+    height: auto;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    margin: 5%; 
+    left: 50%;  
+    opacity: 0; /* Initially hidden */
+    animation: slideInRight  ease-out forwards;
+    animation-timeline: view(); /* Add animation */
+  }
+  
+  .Portmini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    background: linear-gradient(to top, rgb(0, 0, 0), blue);
+  }
+  
+  .mpgird {
+    display: grid;
+    padding: 10%;
+    width: 100vw;
+    grid-template-rows: 30vw 30vw;
+    grid-template-columns: 30vw 30vw;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+  }
+  
+  .mpele1 {
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    grid-column: 1;
+    color: antiquewhite;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    animation: slideInLeft ease-out forwards;
+     /* Add animation */
+     animation-timeline: view();
+  }
+  
+  .mpele2 {
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    grid-column: 2;
+    color: antiquewhite;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    
+    animation: slideInRight  ease-out forwards;
+    animation-timeline: view(); /* Add animation */
+  }
+  
+  .mpele3 {
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    height: 30vw;
+    width: auto;
+    color: antiquewhite;
+    display: flex;
+    justify-self: center;
+    border-radius: 10px;
+    position: relative;
+    opacity: 0; /* Initially hidden */
+   
+    animation: slideInLeft ease-out forwards;
+    animation-timeline: view(); /* Add animation */
+  }
+  
+  .Cocon {
+    position: absolute;
+    background-color: #FBE4D6;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 1px black;
+    font-size: 1.3vw;
+    opacity: 0;
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .Cocon p {
+    text-align: justify;
+    text-indent: 10%;
+    line-height: 1.5;
+    width: 90%;
+  }
+  
+  .Cocon ul {
+    padding: auto;
+  }
+  
+  .Codet {
+    position: absolute;
+    display: flex;
+    line-height: 2vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  .Codet h1 {
+    font-size: 2.5vw;
+  }
+  
+  .Codet p {
+    font-size: 1.5vw;
+  }
+  
+  .Cocon:hover {
+    opacity: 1; /* Reveals on hover */
+  }
+
+  /* ----------- Mobile View ----------- */
+@media screen and (max-width: 600px) {
+    .ServiceHolder {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      padding: 5%;
+      position: relative;
+    }
+  
+    .service{
+      width: 100%;
+      position: relative;
+      margin: 5% 0;
+      animation: none;
+      opacity: 1;
+    }
+  
+    .whatwe {
+      display: flex; 
+      position: relative;
+      left: 0;
+      width: 100%;
+      /* Show whatwe in mobile below service */
+    }
+  
+    .Sertit {
+      font-size: 7vw;
+    }
+  
+    .Sercon {
+      font-size: 4vw;
+      padding: 5%;
+      line-height: 1.8;
+    }
+  
+    .Portmini {
+      flex-direction: column;
+      height: auto;
+      width: 100vw;
+    }
+  
+    .mpgird {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      width: 100%;
+      padding: 5%;
+      gap: 5%;
+    }
+  
+    .mpele1,
+    .mpele2,
+    .mpele3 {
+      width: 100%;
+      height: auto;
+      animation: none;
+      opacity: 1;
+    }
+  
+    .Cocon {
+      font-size: 4vw;
+      flex-direction: column;
+      padding: 5%;
+    }
+  
+    .Codet h1 {
+      font-size: 6vw;
+    }
+  
+    .Codet p {
+      font-size: 4vw;
+    }
+  }
